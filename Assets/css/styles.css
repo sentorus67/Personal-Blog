@@ -1,0 +1,23 @@
+body{
+    background-image: url(../Images/UnderwaterOcean.jpg);
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: fit-content;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 5px solid white;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+main{
+    display: flex;
+    overflow-y: scroll;
+    height: 450px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
