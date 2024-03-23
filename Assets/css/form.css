@@ -1,0 +1,73 @@
+body{
+    background-image: url(../Images/UnderwaterOcean.jpg);
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+header button{
+   margin-left: 30%;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 700px;
+    margin-top: 5%;
+}
+h2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formMain{
+float: left;
+
+width: 45%;
+height: 100%;
+margin-right: 8%;
+}
+
+.placeOfInput{
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    border-radius: 100%;
+    height: 60%;
+    width: 45%; 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    width: 50%;
+    margin-top: 5px;
+    height: 20px;
+}
+
+#comment{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 15%;
+    padding: 10px;
+}
+
+#submitButton{
+    width: 60%;
+    height: 10%;
+    margin: 4% 5% 5% 5%;
+}
