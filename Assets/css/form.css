@@ -12,6 +12,7 @@ header{
     display: flex;
     justify-content: center;
     border: 1px solid black;
+
 }
 header button{
    margin-left: 30%;
@@ -71,3 +72,26 @@ input{
     height: 10%;
     margin: 4% 5% 5% 5%;
 }
+
+/* .light{
+    background-color: grey;
+} */
+
+header[data-mode="light"], section[data-mode="light"]{
+    background-color: cornsilk;
+    border: 5px solid goldenrod;
+} 
+
+body[data-mode="light"]{
+    background-image: url(../Images/UnderwaterOcean.jpg);
+}
+
+body[data-mode="dark"]{
+    background-image: url(../Images/UnderwaterNightOcean.png);
+}
+
+header[data-mode="dark"],section[data-mode="dark"]{
+    background-color: darkcyan;
+    border: 5px solid purple;
+}
+
