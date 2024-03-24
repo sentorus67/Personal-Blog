@@ -1,5 +1,6 @@
 currentPage=document.getElementById('blogView');
 switchButton= document.getElementById('switchPage');
+lights=document.getElementById('lightSwitch');
 
 
 
@@ -16,6 +17,7 @@ function changeLocation(){
     }
 }
 
+lights.addEventListener("click",console.log(localStorage.getItem('post')));
 
 switchButton.addEventListener("click",changeLocation);
 
