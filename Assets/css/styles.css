@@ -16,8 +16,25 @@ header{
 }
 main{
     display: flex;
+    flex-wrap: wrap;
     overflow-y: scroll;
     height: 450px;
     margin-top: 10%;
     margin-bottom: 10%;
+}
+
+section{
+    display: block;
+    width: 80%;
+    height: 200px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    background-color: whitesmoke;
+}
+aside{
+    border: 5px dashed pink;
+}
+div{
+    border: 5px solid gold;
 }
