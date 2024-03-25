@@ -1,10 +1,10 @@
-currentPage=document.getElementById('blogView');
-switchButton= document.getElementById('switchPage');
+ currentPage=document.getElementById('blogView');
+let switchButton= document.getElementById('switchPage');
 lights=document.getElementById('lightSwitch');
 const bodyjunction=document.getElementById('placeOfViewing')
  let colorMode= document.querySelectorAll('[data-mode]');
 
-submittedPost=JSON.parse(localStorage.getItem('post'));
+let submittedPost=JSON.parse(localStorage.getItem('post'));
 const sunIcon="Assets/Images/CourageSun.jpg";
 const moonIcon="Assets/Images/FriendshipMoon.jpg";
 
