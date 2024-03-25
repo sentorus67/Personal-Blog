@@ -3,6 +3,15 @@ const currentPage=document.getElementById('inputForm');
 const switchButton= document.getElementById('switchPage');
 const  lightSwitch= document.getElementById('lightSwitch');
 const colorMode= document.querySelectorAll('[data-mode]');
+const soLunaFish= document.getElementById('lunarSolarFish');
+
+const sunFish="Assets/Images/Sunfish.png";
+const moonFish= "Assets/Images/Moonfish.png";
+const sunIcon="Assets/Images/CourageSun.jpg";
+const moonIcon="Assets/Images/FriendshipMoon.jpg";
+
+
+fishSwap();
 
 if(localStorage.getItem('lights')==null){
     localStorage.setItem('lights',"light");
@@ -13,7 +22,19 @@ if(colorMode[0].dataset.mode!=localStorage.getItem('lights')){
          lightAndDark(colorMode[index]);
     }
     localStorage.setItem('lights', colorMode[0].dataset.mode);
+   fishSwap();
+}
+
+function fishSwap(){
+    if(soLunaFish.dataset.mode=="light"){
+        soLunaFish.src=sunFish;
+        lightSwitch.firstElementChild.src=sunIcon;
    
+    }
+    else{
+        soLunaFish.src=moonFish;
+         lightSwitch.firstElementChild.src=moonIcon;
+    }
 }
 
 
@@ -49,6 +70,6 @@ for (let index = 0; index < colorMode.length; index++) {
     
     lightAndDark(colorMode[index]);
 }
-
+    fishSwap();
 });
 switchButton.addEventListener("click",changeLocation);

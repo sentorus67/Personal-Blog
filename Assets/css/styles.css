@@ -16,6 +16,10 @@ header{
     
     
 }
+header img{
+    width: 100px;
+    height: 100px;
+}
 main{
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +65,10 @@ div{
     max-width: 300px;
     height: auto;
     float: left;
+}
+a{
+    color: red;
+    font-size: large;
 }
 /* -------------------------------------  */
 

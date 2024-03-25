@@ -7,6 +7,8 @@ const bodyjunction=document.getElementById('placeOfViewing')
 
 //----------------------------------------------------------------
 submittedPost=JSON.parse(localStorage.getItem('post'));
+const sunIcon="Assets/Images/CourageSun.jpg";
+const moonIcon="Assets/Images/FriendshipMoon.jpg";
 
 if(localStorage.getItem('lights')==null){
     localStorage.setItem('lights',"light");
@@ -17,10 +19,20 @@ if(colorMode[0].dataset.mode!=localStorage.getItem('lights')){
          lightAndDark(colorMode[index]);
     }
     localStorage.setItem('lights', colorMode[0].dataset.mode);
+    iconSwap();
    
 }
 
+function iconSwap(){
+    if(lightSwitch.dataset.mode=="light"){
+        lightSwitch.firstElementChild.src=sunIcon;
+    }
+    else{
+        lightSwitch.firstElementChild.src=moonIcon;
+    }
+}
 
+ iconSwap();
 function changeLocation(){
    
     if (currentPage.getAttribute('id')=="inputForm")
@@ -83,7 +95,7 @@ lightSwitch.addEventListener("click",function(){
         
         lightAndDark(colorMode[index]);
     }
-
+    iconSwap();
 });
 
 lights.addEventListener("click",lightAndDark);
