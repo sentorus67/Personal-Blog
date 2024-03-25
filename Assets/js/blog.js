@@ -3,9 +3,7 @@ switchButton= document.getElementById('switchPage');
 lights=document.getElementById('lightSwitch');
 const bodyjunction=document.getElementById('placeOfViewing')
  let colorMode= document.querySelectorAll('[data-mode]');
-// ---------------------------------------------------
 
-//----------------------------------------------------------------
 submittedPost=JSON.parse(localStorage.getItem('post'));
 const sunIcon="Assets/Images/CourageSun.jpg";
 const moonIcon="Assets/Images/FriendshipMoon.jpg";
@@ -20,7 +18,6 @@ if(colorMode[0].dataset.mode!=localStorage.getItem('lights')){
     }
     localStorage.setItem('lights', colorMode[0].dataset.mode);
     iconSwap();
-   
 }
 
 function iconSwap(){
@@ -37,11 +34,10 @@ function changeLocation(){
    
     if (currentPage.getAttribute('id')=="inputForm")
     {
-        //alert("The page attempted to change.");
        window.location.href = "blog.html";
     }
     else
-    {   //alert("the id is incorrect");
+    {   
         window.location.href="index.html";
     }
 }

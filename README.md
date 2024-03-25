@@ -1,8 +1,4 @@
 # Personal-Blog
 
-# below are the following list of objectives in order of focus when working on this project -->
-<!-- Objective 1: make a basic empty blogpost propely styled  -->✔️
-<!-- Objective 2: make a basic empty Infor Submissions form -->✔️
-<!-- Objective 3: created a button that switch between pages -->
-<!-- Objective 4: create a light and dark mode toggle for atleast one page -->
-<!-- Objective 5: create a working submissions box -->
+
+<!-- the purppose of this code is to present th functionality of jabascript and utilizing it to create new aspects of the file in real time. This website usese local storage to create a blog post. It also is able to toggle between light and dark mode, which modify the colors of the website. -->

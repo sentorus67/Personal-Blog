@@ -29,11 +29,10 @@ function fishSwap(){
     if(soLunaFish.dataset.mode=="light"){
         soLunaFish.src=sunFish;
         lightSwitch.firstElementChild.src=sunIcon;
-   
     }
     else{
         soLunaFish.src=moonFish;
-         lightSwitch.firstElementChild.src=moonIcon;
+        lightSwitch.firstElementChild.src=moonIcon;
     }
 }
 
