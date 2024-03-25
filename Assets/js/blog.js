@@ -68,9 +68,10 @@ function changeLocation(){
     postDiv.appendChild(placeContent);
 }
 
-
-for (let index = 0; index < submittedPost.length; index++) {
-    displaySubmission(submittedPost[index]);
+if(submittedPost.length>0){
+    for (let index = 0; index < submittedPost.length; index++) {
+        displaySubmission(submittedPost[index]);
+    }
 }
 
 function lightAndDark(x){
