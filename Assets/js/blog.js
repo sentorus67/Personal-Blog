@@ -2,10 +2,23 @@ currentPage=document.getElementById('blogView');
 switchButton= document.getElementById('switchPage');
 lights=document.getElementById('lightSwitch');
 const bodyjunction=document.getElementById('placeOfViewing')
+ let colorMode= document.querySelectorAll('[data-mode]');
 // ---------------------------------------------------
 
 //----------------------------------------------------------------
 submittedPost=JSON.parse(localStorage.getItem('post'));
+
+if(localStorage.getItem('lights')==null){
+    localStorage.setItem('lights',"light");
+}
+
+if(colorMode[0].dataset.mode!=localStorage.getItem('lights')){
+    for (let index = 0; index < colorMode.length; index++) {
+         lightAndDark(colorMode[index]);
+    }
+    localStorage.setItem('lights', colorMode[0].dataset.mode);
+   
+}
 
 
 function changeLocation(){
@@ -36,7 +49,9 @@ function changeLocation(){
     placeContent.textContent=x.postComment;
 
     bodyjunction.appendChild(postBody);
+    postBody.setAttribute("data-mode",localStorage.getItem('lights'));
     postBody.appendChild(postHeader);
+ 
     postBody.appendChild(postAside);
     postBody.appendChild(postDiv);
 
@@ -50,7 +65,27 @@ for (let index = 0; index < submittedPost.length; index++) {
     displaySubmission(submittedPost[index]);
 }
 
-lights.addEventListener("click",console.log(localStorage.getItem('post')));
+function lightAndDark(x){
+    colorMode= document.querySelectorAll('[data-mode]');
+    if (x.dataset != undefined){
+    if (x.dataset.mode=="light"){
+        x.dataset.mode="dark";
+    }
+    else{
+        x.dataset.mode="light";
+    }
+  localStorage.setItem('lights',colorMode[0].dataset.mode);
+    }
+}
 
+lightSwitch.addEventListener("click",function(){
+    for (let index = 0; index < colorMode.length; index++) {
+        
+        lightAndDark(colorMode[index]);
+    }
+
+});
+
+lights.addEventListener("click",lightAndDark);
 switchButton.addEventListener("click",changeLocation);
 

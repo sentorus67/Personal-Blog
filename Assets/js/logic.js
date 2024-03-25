@@ -4,6 +4,17 @@ const switchButton= document.getElementById('switchPage');
 const  lightSwitch= document.getElementById('lightSwitch');
 const colorMode= document.querySelectorAll('[data-mode]');
 
+if(localStorage.getItem('lights')==null){
+    localStorage.setItem('lights',"light");
+}
+
+if(colorMode[0].dataset.mode!=localStorage.getItem('lights')){
+    for (let index = 0; index < colorMode.length; index++) {
+         lightAndDark(colorMode[index]);
+    }
+    localStorage.setItem('lights', colorMode[0].dataset.mode);
+   
+}
 
 
 function changeLocation(){
@@ -21,12 +32,16 @@ function changeLocation(){
 }
 
 function lightAndDark(x){
+    if (x.dataset != undefined)
+    {
     if (x.dataset.mode=="light"){
         x.dataset.mode="dark";
     }
     else{
         x.dataset.mode="light";
     }
+    localStorage.setItem('lights', colorMode[0].dataset.mode);
+}
 }
 
 lightSwitch.addEventListener("click",function(){

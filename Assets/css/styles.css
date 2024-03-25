@@ -6,35 +6,96 @@ body{
     height: fit-content;
     margin-left: 25%;
     margin-right: 25%;
-    border: 5px solid white;
 }
 
 header{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    border-bottom: 5px solid orange;
+    
+    
 }
 main{
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
-    height: 450px;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    height: 800px;
+   
 }
-
+/* style of created post messages */
 section{
     display: block;
     width: 80%;
-    height: 200px;
+    height: auto;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 5%;
-    background-color: whitesmoke;
+    border: 5px solid orange;
+    background-color: cornsilk;
+    
 }
+section header {
+    justify-content: center;
+    /* border: 2px solid orange; */
+    
+    /* background-color: green; */
+    
+}
+
 aside{
-    border: 5px dashed pink;
+    border-right: 5px solid red;
+    width: 25%;
+    height: 45%;
+    float: left;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+h3{
+    display: flex;
+    justify-content: center;
 }
 div{
-    border: 5px solid gold;
+    margin-left: 5%;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    float: left;
+}
+/* -------------------------------------  */
+
+body[data-mode="light"]{
+    background-image: url(../Images/UnderwaterOcean.jpg);
+}
+
+body[data-mode="dark"]{
+    background-image: url(../Images/UnderwaterNightOcean.png);
+}
+
+header[data-mode="light"],main[data-mode="light"], footer[data-mode="light"]{
+    background-color: lightblue;
+    border: 5px solid goldenrod;
+} 
+section[data-mode="light"]{
+     background-color: cornsilk; 
+   
+} 
+
+/* --------------------------------------- */
+
+body[data-mode="dark"]{
+    background-image: url(../Images/UnderwaterNightOcean.png);
+}
+
+header[data-mode="dark"],main[data-mode="dark"], footer[data-mode="dark"]{
+    background-color: darkcyan;
+    border: 5px solid purple;
+} 
+
+section[data-mode="dark"]{
+    background-color: #45008b;
+    color: whitesmoke;
+}
+aside[data-mode="dark"]{
+    border-color: orangered;
 }
