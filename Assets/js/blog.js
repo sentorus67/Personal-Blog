@@ -68,7 +68,7 @@ function changeLocation(){
     postDiv.appendChild(placeContent);
 }
 
-if(submittedPost.length!=null){
+if(submittedPost!=null){
     for (let index = 0; index < submittedPost.length; index++) {
         displaySubmission(submittedPost[index]);
     }
